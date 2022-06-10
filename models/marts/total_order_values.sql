@@ -15,4 +15,4 @@ final as (
     from customers c left join orders o on (c.customer_id = o.customer_id)
 )
 
-select * from final order by sum_amount ASC
+select * from final order by sum_amount DESC
