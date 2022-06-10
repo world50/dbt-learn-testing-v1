@@ -1,16 +1,10 @@
 with customers as (
-    select
-        customer_id,
-        first_name,
-        last_name
-    from RAW.DBT_FUNDAMENTALS_PRODUCTION.DIM_CUSTOMERS
+    select *
+    from {{ ref('stg_customers')}}
 ),
 orders as (
-    select
-        customer_id,
-        sum(amount) as sum_amount
-    from raw.dbt_fundamentals_production.fct_orders
-    group by customer_id
+    select *
+    from {{ ref('stg_orders')}}
 ),
 final as (
     select 
@@ -21,4 +15,4 @@ final as (
     from customers c left join orders o on (c.customer_id = o.customer_id)
 )
 
-select * from final order by sum_amount DESC
+select * from final order by sum_amount ASC
