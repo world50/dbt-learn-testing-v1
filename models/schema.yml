@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: extract customers information individually
+    columns:
+      - name: customer_id
+        description: unique identifier
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    description: Sum up order amount based on unique customer_id
+    columns:
+      - name: customer_id
+        description: unique identifier
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_last_10_days_seq_date
+    description: Generate Table for last 10 days
+    columns:
+      - name: seq_date
+        description: unique identifier
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_last_10_days_order_amount
+    description: Last 10 days sum of order amount
+    columns:
+      - name: order_date
+        description: unique identifier
+        tests:
+          - unique
+          - not_null          
+
+  - name: total_order_values
+    description: Merge stg_customers and stg_orders based on customer_id
+    columns:
+      - name: customer_id
+        description: unique identifier
+        tests:
+          - unique
+          - not_null
