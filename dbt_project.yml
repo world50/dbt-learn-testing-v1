@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'DBT_FUNDAMENTALS_PRODUCTION_B'
+name: 'DBT_FUNDAMENTALS_PRODUCTION'
 version: '1.0.0'
 config-version: 2
 
@@ -32,7 +32,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  DBT_FUNDAMENTALS_PRODUCTION_B:
+  DBT_FUNDAMENTALS_PRODUCTION:
     marts:
       total_order_values:
         +materialized: table
@@ -43,6 +43,3 @@ models:
         +materialized: view
       stg_orders:
         +materialized: view
-    # Applies to all files under models/example/
-    example:
-      materialized: view
