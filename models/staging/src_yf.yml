@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+    - name: yf
+      database: raw
+      schema: "API_TEST_V1"
+      description: Yahoo Finance Database
+      tables:
+        - name: yf_company_profile

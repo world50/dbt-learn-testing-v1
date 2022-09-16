@@ -1,0 +1,101 @@
+version: 2
+
+sources:
+    - name: w50_postgres
+      database: raw_datalake
+      schema: "PROD_W50POSTGRES"
+      description: World 50 Member App Database
+      tables: 
+        - name: address
+        - name: anonymous_avatar
+        - name: anonymous_avatar_image
+        - name: app_version
+        - name: client_build_number
+        - name: community
+        - name: community_membership
+        - name: community_tag
+        - name: company
+        - name: company_address
+        - name: config
+        - name: content_topic
+        - name: content_topic_alias
+        - name: direct_connection
+        - name: doclet
+        - name: doclet_communities_community
+        - name: doclet_images_image
+        - name: doclet_topics_topic
+        - name: document
+        - name: document_communities_community
+        - name: education
+        - name: email_address
+        - name: email_whitelist
+        - name: employment
+        - name: entity_content_topic_map
+        - name: event
+        - name: event_address
+        - name: event_attendee
+        - name: event_email_queue
+        - name: event_groups
+        - name: executive_assistant
+        - name: extraction_time
+        - name: file_attachment
+        - name: group
+          identifier: GROUP
+          quoting:
+            identifier: true
+        - name: group_membership
+        - name: host_media
+        - name: image
+        - name: job_function
+        - name: legal_agreement
+        - name: legal_document
+        - name: media
+        - name: media_communities_community
+        - name: media_session
+        - name: membership_os_goal
+        - name: member_profile
+        - name: message
+        - name: message_attachments_file_attachment
+        - name: message_images_image
+        - name: migrations
+        - name: notification
+        - name: notification_created_by_person
+        - name: notification_email
+        - name: notification_email_trigger
+        - name: person
+        - name: person_community_map
+        - name: person_entity_map
+        - name: person_entity_source_map
+        - name: person_tag
+        - name: persona
+        - name: personal_address
+        - name: phone_number
+        - name: poll
+        - name: poll_option
+        - name: poll_vote
+        - name: post
+        - name: post_attachments_file_attachment
+        - name: post_community_map
+        - name: post_images_image
+        - name: post_subscribers_person
+        - name: product_market_segments
+        - name: program
+        - name: question
+        - name: question_template
+        - name: room
+        - name: room_membership
+        - name: salesforce_sync_data
+        - name: settings
+        - name: speaker_profile
+        - name: temporary_code
+        - name: topic
+        - name: university
+        - name: user
+        - name: user_device
+        - name: user_ip_address
+        - name: user_media_state
+        - name: validation
+        - name: validation_map
+        - name: zoom_meeting
+        - name: zoom_meeting_phone_numbers_zoom_phone_number
+        - name: zoom_phone_number
