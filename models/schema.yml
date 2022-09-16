@@ -45,3 +45,13 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: stg_person
+    description: person
+    columns:
+      - name: id
+        description: unique identifier
+        tests:
+          - unique
+          - not_null
+          
